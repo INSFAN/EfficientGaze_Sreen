@@ -193,7 +193,7 @@ cv::Point2f InputHandler::mapToDisplay(Vec3f origin, Vec3f gaze_vec) {
     gaze_pos_.copyTo(gaze_pos_3d);
 
     gaze_on_screen.x = gaze_pos_3d.val[0] / monitor_W_;
-    gaze_on_screen.y = gaze_pos_3d.val[1] / d;
+    gaze_on_screen.y = gaze_pos_3d.val[1] / monitor_H_;
 
     return gaze_on_screen;
 
