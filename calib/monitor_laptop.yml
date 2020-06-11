@@ -1,0 +1,13 @@
+%YAML:1.0
+monitor_W: 310
+monitor_H: 174
+monitor_R: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ -0.9999, 0.0013, -0.0160, 0.0004, 0.9984, 0.0557, 0.0161, 0.0556, -0.9983]
+monitor_T: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: f
+   data: [109.2424, -43.3863, 545.0863]

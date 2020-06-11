@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+11b674b580ed8f94302095331915c96e onnx.pb.h

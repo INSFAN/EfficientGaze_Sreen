@@ -1,0 +1,126 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ce969/fast && /usr/bin/make -f CMakeFiles/cmTC_ce969.dir/build.make CMakeFiles/cmTC_ce969.dir/build
+make[1]: Entering directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce969.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ce969.dir/src.c.o   -c /media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ce969
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce969.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_ce969.dir/src.c.o  -o cmTC_ce969 
+CMakeFiles/cmTC_ce969.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3c)：对‘pthread_create’未定义的引用
+src.c:(.text+0x48)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x59)：对‘pthread_join’未定义的引用
+src.c:(.text+0x6d)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ce969.dir/build.make:86: recipe for target 'cmTC_ce969' failed
+make[1]: *** [cmTC_ce969] Error 1
+make[1]: Leaving directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_ce969/fast' failed
+make: *** [cmTC_ce969/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_26adf/fast && /usr/bin/make -f CMakeFiles/cmTC_26adf.dir/build.make CMakeFiles/cmTC_26adf.dir/build
+make[1]: Entering directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_26adf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_26adf.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_26adf
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26adf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_26adf.dir/CheckFunctionExists.c.o  -o cmTC_26adf  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_26adf.dir/build.make:86: recipe for target 'cmTC_26adf' failed
+make[1]: *** [cmTC_26adf] Error 1
+make[1]: Leaving directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_26adf/fast' failed
+make: *** [cmTC_26adf/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b8599/fast && /usr/bin/make -f CMakeFiles/cmTC_b8599.dir/build.make CMakeFiles/cmTC_b8599.dir/build
+make[1]: Entering directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b8599.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b8599.dir/src.c.o   -c /media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b8599
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8599.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_b8599.dir/src.c.o  -o cmTC_b8599 
+CMakeFiles/cmTC_b8599.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3c)：对‘pthread_create’未定义的引用
+src.c:(.text+0x48)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x59)：对‘pthread_join’未定义的引用
+src.c:(.text+0x6d)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b8599.dir/build.make:86: recipe for target 'cmTC_b8599' failed
+make[1]: *** [cmTC_b8599] Error 1
+make[1]: Leaving directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_b8599/fast' failed
+make: *** [cmTC_b8599/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c7b79/fast && /usr/bin/make -f CMakeFiles/cmTC_c7b79.dir/build.make CMakeFiles/cmTC_c7b79.dir/build
+make[1]: Entering directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7b79.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c7b79.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c7b79
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7b79.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c7b79.dir/CheckFunctionExists.c.o  -o cmTC_c7b79  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c7b79.dir/build.make:86: recipe for target 'cmTC_c7b79' failed
+make[1]: *** [cmTC_c7b79] Error 1
+make[1]: Leaving directory '/media/insfan/d484ad6a-5ab1-4c54-bc5c-2bc7981980d9/insfan/insfan-git/Face-Detector-1MB-with-landmark/Face_Detector_ncnn/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_c7b79/fast' failed
+make: *** [cmTC_c7b79/fast] Error 2
+
+
+
